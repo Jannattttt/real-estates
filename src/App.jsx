@@ -1,35 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+"use client"
+
+import { useState, createContext } from "react"
+import "./App.css"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Stats from "./components/Stats"
+import PropertyMatch from "./components/PropertyMatch"
+import AboutUs from "./components/AboutUs"
+import PropertyShowcase from "./components/PropertyShowcase"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+import PropertyModal from "./components/PropertyModal"
+import ScrollToTop from "./components/ScrollToTop"
+
+// Create contexts for global state
+export const AppContext = createContext(null)
 
 function App() {
-  const [count, setCount] = useState(0)
+  // State for property modal
+  const [selectedProperty, setSelectedProperty] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // State for favorites
+  const [favorites, setFavorites] = useState([])
+
+  // Function to toggle favorites
+  const toggleFavorite = (propertyId) => {
+    if (favorites.includes(propertyId)) {
+      setFavorites(favorites.filter((id) => id !== propertyId))
+    } else {
+      setFavorites([...favorites, propertyId])
+    }
+  }
+
+  // Function to open property modal
+  const openPropertyModal = (property) => {
+    setSelectedProperty(property)
+    setIsModalOpen(true)
+    // Prevent scrolling when modal is open
+    document.body.style.overflow = "hidden"
+  }
+
+  // Function to close property modal
+  const closePropertyModal = () => {
+    setIsModalOpen(false)
+    // Re-enable scrolling
+    document.body.style.overflow = "auto"
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AppContext.Provider
+      value={{
+        favorites,
+        toggleFavorite,
+        openPropertyModal,
+        closePropertyModal,
+      }}
+    >
+      <div className="app">
+        <Navbar />
+        <main>
+          <Hero />
+          <Stats />
+          <AboutUs />
+          <PropertyMatch />
+          <PropertyShowcase />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
+
+        {/* Property Modal */}
+        {isModalOpen && selectedProperty && <PropertyModal property={selectedProperty} onClose={closePropertyModal} />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </AppContext.Provider>
   )
 }
 
 export default App
+
