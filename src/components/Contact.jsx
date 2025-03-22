@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import "../styles/Contact.css"
+import image1 from "../assets/map.jpeg"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -282,7 +283,7 @@ const Contact = () => {
 
             <div className="office-details">
               <div className="office-map">
-                <img src={offices[activeOffice].mapUrl || "/placeholder.svg"} alt="Office location map" />
+                <img src={image1} alt="Office location map" />
               </div>
 
               <div className="office-contact">

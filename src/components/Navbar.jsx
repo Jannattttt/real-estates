@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from "react"
 import "../styles/Navbar.css"
+import image1 from "../assets/t1.jpeg"
+import image2 from "../assets/t2.jpeg"
+import image3 from "../assets/t3.jpeg"
+import image4 from "../assets/blog1.jpeg"
+import image5 from "../assets/blog2.jpeg"
+import image6 from "../assets/blog3.jpeg"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -132,39 +138,39 @@ const Navbar = () => {
                   <div className="testimonials-container">
                     <div className="testimonial">
                       <div className="testimonial-avatar">
-                        <img src="/placeholder.svg?height=60&width=60&text=JD" alt="John Doe" />
+                        <img src={image1} alt="John Doe" />
                       </div>
                       <div className="testimonial-content">
                         <h4>John Doe</h4>
                         <div className="stars">★★★★★</div>
                         <p>
-                          "Housify helped me find my dream home in just two weeks! Their team was professional and
+                          "Behomed helped me find my dream home in just two weeks! Their team was professional and
                           attentive to all my needs."
                         </p>
                       </div>
                     </div>
                     <div className="testimonial">
                       <div className="testimonial-avatar">
-                        <img src="/placeholder.svg?height=60&width=60&text=SM" alt="Sarah Miller" />
+                        <img src={image2} alt="Sarah Miller" />
                       </div>
                       <div className="testimonial-content">
                         <h4>Sarah Miller</h4>
                         <div className="stars">★★★★★</div>
                         <p>
-                          "I sold my property through Housify and got a better price than I expected. Their marketing
+                          "I sold my property through Behomed and got a better price than I expected. Their marketing
                           strategy really works!"
                         </p>
                       </div>
                     </div>
                     <div className="testimonial">
                       <div className="testimonial-avatar">
-                        <img src="/placeholder.svg?height=60&width=60&text=RJ" alt="Robert Johnson" />
+                        <img src={image3} alt="Robert Johnson" />
                       </div>
                       <div className="testimonial-content">
                         <h4>Robert Johnson</h4>
                         <div className="stars">★★★★☆</div>
                         <p>
-                          "Great experience working with the Housify team. They made the entire process smooth and
+                          "Great experience working with the Behomed team. They made the entire process smooth and
                           stress-free."
                         </p>
                       </div>
@@ -178,7 +184,7 @@ const Navbar = () => {
                   <h2>Latest Blog Posts</h2>
                   <div className="blog-posts">
                     <div className="blog-post">
-                      <img src="/placeholder.svg?height=150&width=250&text=Real+Estate+Trends" alt="Blog post" />
+                      <img src={image4} alt="Blog post" />
                       <div className="blog-content">
                         <h3>2023 Real Estate Market Trends</h3>
                         <p className="blog-date">June 15, 2023</p>
@@ -192,7 +198,7 @@ const Navbar = () => {
                       </div>
                     </div>
                     <div className="blog-post">
-                      <img src="/placeholder.svg?height=150&width=250&text=Home+Staging" alt="Blog post" />
+                      <img src={image5} alt="Blog post" />
                       <div className="blog-content">
                         <h3>Home Staging Tips That Sell</h3>
                         <p className="blog-date">May 28, 2023</p>
@@ -206,7 +212,7 @@ const Navbar = () => {
                       </div>
                     </div>
                     <div className="blog-post">
-                      <img src="/placeholder.svg?height=150&width=250&text=Investment+Guide" alt="Blog post" />
+                      <img src={image6} alt="Blog post" />
                       <div className="blog-content">
                         <h3>Beginner's Guide to Real Estate Investment</h3>
                         <p className="blog-date">April 10, 2023</p>
@@ -277,9 +283,9 @@ const Navbar = () => {
                   <h2>Frequently Asked Questions</h2>
                   <div className="faq-container">
                     <div className="faq-item">
-                      <h3>What services does Housify offer?</h3>
+                      <h3>What services does Behomed offer?</h3>
                       <p>
-                        Housify offers a comprehensive range of real estate services including buying, selling, renting,
+                        Behomed offers a comprehensive range of real estate services including buying, selling, renting,
                         and property management. Our team of experienced agents can guide you through every step of your
                         real estate journey.
                       </p>
@@ -307,7 +313,7 @@ const Navbar = () => {
                       <h3>How long does it take to sell a property?</h3>
                       <p>
                         The time it takes to sell a property varies depending on market conditions, property location,
-                        pricing, and other factors. On average, properties listed with Housify sell within 30-60 days,
+                        pricing, and other factors. On average, properties listed with Behomed sell within 30-60 days,
                         but we'll provide you with a more specific timeline based on your property's characteristics.
                       </p>
                     </div>
