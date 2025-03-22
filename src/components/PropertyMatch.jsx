@@ -4,6 +4,10 @@ import { useContext, useState, useEffect } from "react"
 import "../styles/PropertyMatch.css"
 import PropertyCard from "./PropertyCard"
 import { AppContext } from "../App"
+import image1 from "../assets/prop-match.jpeg"
+import image2 from "../assets/modern-kitchen.jpeg"
+import image3 from "../assets/luxury-bathroom.jpeg"
+import image4 from "../assets/living-room.jpeg"
 
 const PropertyMatch = () => {
   const { openPropertyModal } = useContext(AppContext)
@@ -17,32 +21,32 @@ const PropertyMatch = () => {
     beds: 3,
     baths: 2,
     sqft: "2,225",
-    image: "/placeholder.svg?height=300&width=400",
+    image: image1,
     description:
       "This stunning modern home features an open floor plan, high ceilings, and abundant natural light. The gourmet kitchen includes top-of-the-line appliances and a large island perfect for entertaining.",
     amenities: ["Swimming Pool", "Garden", "Garage", "Air Conditioning", "Security System"],
     images: [
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400&text=Interior",
-      "/placeholder.svg?height=300&width=400&text=Kitchen",
-      "/placeholder.svg?height=300&width=400&text=Bedroom",
+      image2,
+      image4,
+      image1,
+      image3,
     ],
   }
 
   const propertyImages = [
     {
       id: 2,
-      image: "/placeholder.svg?height=200&width=300&text=Modern Kitchen",
+      image: image2,
       title: "Modern Kitchen",
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=200&width=300&text=Luxury Bathroom",
+      image: image3,
       title: "Luxury Bathroom",
     },
     {
       id: 4,
-      image: "/placeholder.svg?height=200&width=300&text=Spacious Living Room",
+      image: image4,
       title: "Spacious Living Room",
     },
   ]

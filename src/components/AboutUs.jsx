@@ -5,6 +5,7 @@ import "../styles/AboutUs.css"
 import image1 from "../assets/tm1.jpeg"
 import image2 from "../assets/tm2.jpeg"
 import image3 from "../assets/tm3.jpeg"
+import image4 from "../assets/happy-clients.jpg"
 
 const AboutUs = () => {
   const sectionRef = useRef(null)
@@ -80,7 +81,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="about-us-image">
-          <img src="/placeholder.svg?height=400&width=500" alt="Real estate agents with clients" />
+          <img src={image4} alt="Real estate agents with clients" />
         </div>
       </div>
     </section>
