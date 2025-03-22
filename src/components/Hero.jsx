@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import "../styles/Hero.css"
+import image1 from "../assets/home1.jpg"
 
 const Hero = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)

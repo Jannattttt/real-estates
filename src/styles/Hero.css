@@ -1,6 +1,6 @@
 .hero {
     height: 600px;
-    background-image: url("/placeholder.svg?height=600&width=1200");
+    background-image: url("../assets/home1.jpg?height=600&width=1200");
     background-size: cover;
     background-position: center;
     position: relative;

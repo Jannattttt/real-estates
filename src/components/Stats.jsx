@@ -60,7 +60,7 @@ const Stats = () => {
       <div className="who-we-are">
         <h2>Who We Are?</h2>
         <p>We offer a range of services including buying, selling, and property management.</p>
-        <button className="learn-more-btn">Learn More About Us</button>
+        <button className="learn-more-btn" onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>Learn More About Us</button>
       </div>
       <div className="stats-container">
         <div className="stat-item">

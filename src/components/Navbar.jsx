@@ -69,7 +69,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          HOUSIFY
+          BEHOMED
         </div>
 
         {/* Mobile menu button */}
