@@ -4,6 +4,12 @@ import { useState, useContext, useEffect } from "react"
 import "../styles/PropertyShowcase.css"
 import PropertyCard from "./PropertyCard"
 import { AppContext } from "../App"
+import image1 from "../assets/sc1.jpeg"
+import image2 from "../assets/sc2.jpeg"
+import image3 from "../assets/sc3.jpeg"
+import image4 from "../assets/sc4.jpeg"
+import image5 from "../assets/sc5.jpeg"
+import image6 from "../assets/sc6.jpeg"
 
 const PropertyShowcase = () => {
   const { openPropertyModal } = useContext(AppContext)
@@ -21,7 +27,7 @@ const PropertyShowcase = () => {
       beds: 3,
       baths: 2,
       sqft: "2,100",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image1,
       type: "sale",
       description:
         "Beautiful family home in a quiet neighborhood with excellent schools nearby. Features a spacious backyard and updated kitchen.",
@@ -35,7 +41,7 @@ const PropertyShowcase = () => {
       beds: 4,
       baths: 3,
       sqft: "2,725",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image2,
       type: "sale",
       description:
         "Luxurious home with stunning ocean views. This property features high-end finishes, a gourmet kitchen, and a private terrace.",
@@ -49,7 +55,7 @@ const PropertyShowcase = () => {
       beds: 3,
       baths: 2,
       sqft: "2,150",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image3,
       type: "sale",
       description:
         "Charming brownstone in a historic district. Features original hardwood floors, high ceilings, and a renovated kitchen.",
@@ -63,7 +69,7 @@ const PropertyShowcase = () => {
       beds: 2,
       baths: 2,
       sqft: "1,800",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image4,
       type: "rent",
       description:
         "Modern loft in the heart of downtown with floor-to-ceiling windows, exposed brick walls, and industrial-chic design.",
@@ -77,7 +83,7 @@ const PropertyShowcase = () => {
       beds: 1,
       baths: 1,
       sqft: "950",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image5,
       type: "rent",
       description: "Cozy apartment with river views, recently renovated with modern appliances and in-unit laundry.",
       amenities: ["River View", "In-unit Laundry", "Doorman", "Elevator"],
@@ -90,7 +96,7 @@ const PropertyShowcase = () => {
       beds: 3,
       baths: 2,
       sqft: "2,000",
-      image: "/placeholder.svg?height=250&width=350",
+      image: image6,
       type: "sold",
       description:
         "SOLD: Mountain retreat with breathtaking views, large windows, and an open floor plan perfect for entertaining.",

@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-top">
-          <div className="footer-logo">HOUSIFY</div>
+          <div className="footer-logo">BEHOMED</div>
 
           {/* Newsletter subscription */}
           <div className="newsletter">
@@ -75,7 +75,7 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Contact</h3>
             <ul>
-              <li>info@housify.com</li>
+              <li>info@behomed.com</li>
               <li>+1 (555) 123-4567</li>
               <li>123 Real Estate Blvd</li>
               <li>Los Angeles, CA 90001</li>
@@ -100,7 +100,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} HOUSIFY. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} BEHOMED. All rights reserved.</p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

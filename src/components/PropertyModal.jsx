@@ -178,7 +178,7 @@ const PropertyModal = ({ property, onClose }) => {
                       <p>Senior Real Estate Agent</p>
                       <p>License #: 12345678</p>
                       <p>Phone: (555) 123-4567</p>
-                      <p>Email: john@housify.com</p>
+                      <p>Email: john@behomed.com</p>
                     </div>
                   </div>
 
